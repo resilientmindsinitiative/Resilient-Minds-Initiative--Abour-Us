@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About Us - Resilient Minds Initiative</title>
     <style>
-        /* Global styles */
+        /* Global reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,15 +19,17 @@
             line-height: 1.6;
             background: linear-gradient(135deg, #a8e6cf, #89cff0);
             color: #333;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             background-attachment: fixed;
+            padding: 10px;
         }
 
         /* Container styles */
         .container {
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -38,25 +40,26 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
             text-transform: uppercase;
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 20px;
             color: #666;
             line-height: 1.8;
         }
 
-        /* Section styles */
+        /* About section styling */
         .about-section {
             background-color: #fff;
-            padding: 40px;
+            padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
@@ -65,14 +68,54 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
+        /* Responsive styles for larger tablets and small laptops */
+        @media (min-width: 768px) {
+            body {
+                padding: 20px;
+            }
+
             h1 {
                 font-size: 2.5rem;
             }
 
             p {
+                font-size: 1.2rem;
+            }
+
+            .about-section {
+                padding: 2.5rem;
+                max-width: 90%;
+            }
+        }
+
+        /* Responsive styles for larger screens (desktops) */
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            .about-section {
+                padding: 3rem;
+                max-width: 80%;
+            }
+        }
+
+        /* Responsive styles for mobile devices */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            p {
                 font-size: 1rem;
+            }
+
+            .about-section {
+                padding: 1.5rem;
             }
         }
     </style>
